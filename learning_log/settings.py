@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-qk-l11f9b_fi7)bt7g0uglp8u#xttl)zefo&yrsnq19lldh^qq
 DEBUG = True
 
 # 允許 Render 產生的網域訪問
-ALLOWED_HOSTS = ['onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition

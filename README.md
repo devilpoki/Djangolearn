@@ -47,7 +47,8 @@ python manage.py migrate
 點擊 New + 選擇 Web Service，並連結含有 Django 專案的 Repository。
 填寫以下基本資訊：
 Environment: Python 3
-Build Command: ./build.sh
+Build Command: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate && python manage.py createsuperuser --no-input || true
+
 Start Command: gunicorn <專案名稱>.wsgi (請將 <專案名稱> 替換為包含 wsgi.py 的資料夾名)
 在 Environment Variables 區塊新增設定：
 DATABASE_URL: 貼上步驟 4 複製的 Internal Database URL
